@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/question.css">
+    <title>bebras_sample2</title>
+</head>
+<body>
+    <header>
+        <h1>Bebras Contest Sample</h1>
+    </header>
+    <section>
+        <h2>Question : Beehive</h2>
+        <p>蜂を幼虫の場所に移動したい。</p>
+        <p>蜂は１マスずつ進むことができる。</p>
+        <p>マスには壁がついていて、壁の方向には進むことができない。</p>
+        <p>矢印を使って、蜂を幼虫の場所に移動させよう。</p>
+        <div class="drag-range">
+            <div class="map">
+                <img class="mapimg" src="./img/map.png" alt="map">
+            </div>
+            <ul id="arrow-answer">
+                <div class="arrow">
+                    <div class="line1">
+                        <li class="box1"><img id="arrow1" src="./img/e.png" alt="ArrowEast"></li>
+                        <li class="box2"><img id="arrow2" src="./img/e.png" alt="ArrowEast"></li>
+                    </div>
+                    <div class="line2">
+                        <li class="box3"><img id="arrow3" src="./img/se.png" alt="ArrowSouthEast"></li>
+                        <li class="box4"><img id="arrow4" src="./img/se.png" alt="ArrowSouthEast"></li>
+                    </div>
+                    <div class="line3">
+                        <li class="box5"><img id="arrow5" src="./img/sw.png" alt="ArrowSouthWest"></li>
+                        <li class="box6"><img id="arrow6" src="./img/sw.png" alt="ArrowSouthWest"></li>
+                    </div>
+                    <div class="line4">
+                        <li class="box7"><img id="arrow7" src="./img/w.png" alt="ArrowWest"></li>
+                        <li class="box8"><img id="arrow8" src="./img/nw.png" alt="ArrowNouthWest"></li>
+                    </div>
+                    <div class="line5">
+                        <li class="box9"><img id="arrow9" src="./img/ne.png" alt="ArrowNouthEast"></li>
+                        <li class="box10"><img id="arrow10" src="./img/ne.png" alt="ArrowNouthEast"></li>
+                    </div>
+                </div>
+                <div class="clearfix answer">
+                    <li id="ans1">答え１</li>
+                    <li id="ans2">答え２</li>
+                    <li id="ans3">答え３</li>
+                    <li class="fix"><img src="./img/se.png" alt="ArrowSouthEast"></li>
+                    <li id="ans4">答え４</li>
+                </div>
+            </ul>
+        </div>
+        <div class="ans">
+            <button type="button" onclick="answercheck();">答え合わせ</button>
+            <p class="ans-mark"> </p>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright© K.Fujisaki, 2014 All Rights Reserved.</p>
+    </footer>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/question.js"></script>
+</body>
+</html>

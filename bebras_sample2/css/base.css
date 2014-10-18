@@ -1,0 +1,12 @@
+header {
+	text-align: center;
+}
+section {
+	text-align: center;
+}
+footer {
+	text-align: center;
+}
+.clearfix {
+    display: inline-table;
+ }
