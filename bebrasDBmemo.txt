@@ -1,0 +1,15 @@
+ CREATE DATABASE bebras DEFAULT CHARACTER SET utf8;
+
+create table `ANSWER` (
+    `ID` int(32) NOT NULL AUTO_INCREMENT,
+    `NAME` varchar(256) DEFAULT '' NOT NULL,
+    `ANSWER` text DEFAULT '' NOT NULL ,
+    primary key (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+insert into bebras.ANSWER (`NAME`, `ANSWER`) values('swapping','list2,list7,list10,list14')
+
+insert into bebras.ANSWER (`NAME`, `ANSWER`) values('beehive', '1,2,3,1')
+
+insert into bebras.ANSWER (`NAME`, `ANSWER`) values('by_weight', 'log4,log3,log1,log5,log2')
