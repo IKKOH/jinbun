@@ -1,0 +1,35 @@
+.contents {
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top: 20px solid #9EE385;
+    border-left: 20px solid #9EE385;
+    display: inline-block;
+}
+.contents ul {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+.contents li {
+    margin: 0;
+    padding: 0;
+    float:left;
+    width: 80px;
+    height: 80px;
+    vertical-align: top;
+    border-bottom: 20px solid #9EE385;
+    border-right: 20px solid #9EE385;
+    list-style: none;
+    line-height: 80px;
+    text-align: center;
+    overflow: hidden;
+}
+.contents li img {
+    margin: 12px;
+}
+.ans-mark {
+    color: #ff0000;
+}

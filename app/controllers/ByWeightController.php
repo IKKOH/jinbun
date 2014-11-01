@@ -15,7 +15,13 @@ class ByWeightController extends BaseController {
      */
     public function execute()
     {
-        return View::make('By_Weight');
+        // 使用するテンプレート指定
+        $view = View::make('By_Weight');
+
+        // テンプレートで使用する変数セット
+        $view->with("_template", "By_Weight");
+
+        return $view;
     }
 
     /**

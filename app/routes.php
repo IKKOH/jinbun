@@ -19,3 +19,5 @@ Route::get('/Beehive/check', 'BeehiveController@check');
 Route::get('/By_Weight', 'ByWeightController@execute');
 Route::get('/By_Weight/check', 'ByWeightController@check');
 Route::get('/By_Weight/compare', 'ByWeightController@compare');
+Route::get('/CrossThree', 'CrossThreeController@execute');
+Route::get('/CrossThree/check', 'CrossThreeController@check');

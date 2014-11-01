@@ -2,9 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-	{{HTML::style('css/base.css')}}
-	{{HTML::style('css/by_weight.css')}}
+	@include("css")
 	<title>bebras_sample1</title>
 </head>
 <body>
@@ -48,8 +46,6 @@
 	<footer>
 		<p>Copyright© K.Fujisaki, 2014 All Rights Reserved.</p>
 	</footer>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
-	{{HTML::script('js/by_weight.js')}}
+	@include("js")
 </body>
 </html>
