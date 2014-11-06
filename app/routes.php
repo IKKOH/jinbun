@@ -19,3 +19,7 @@ Route::get('/Beehive/check', 'BeehiveController@check');
 Route::get('/By_Weight', 'ByWeightController@execute');
 Route::get('/By_Weight/check', 'ByWeightController@check');
 Route::get('/By_Weight/compare', 'ByWeightController@compare');
+Route::get('/Anagram', 'AnagramController@execute');
+Route::get('/Anagram/check', 'AnagramController@check');
+Route::get('/Coin', 'CoinController@execute');
+Route::get('/Coin/check', 'CoinController@check');

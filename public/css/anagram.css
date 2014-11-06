@@ -1,0 +1,29 @@
+.list {
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.list ul {
+  list-style: none outside none;
+  float: left;
+  margin: 0 0 0 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+}
+.list ul li {
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 5px;
+  position: relative;
+  left: -50%;
+  font-size: 50px;
+}
+.other{
+  border: 5px solid #AAA;
+}
+#change{
+  border: 5px solid #F00;
+}
+
