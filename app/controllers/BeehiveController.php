@@ -9,7 +9,13 @@ class BeehiveController extends BaseController {
      */
     public function execute()
     {
-        return View::make('Beehive');
+        // 使用するテンプレート指定
+        $view = View::make('Beehive');
+
+        // テンプレートで使用する変数セット
+        $view->with("_template", "Beehive");
+
+        return $view;
     }
 
     /**
