@@ -4,8 +4,6 @@ var counter = 0;
 var firstStatus = [1,0,0,0,0];
 //答え
 var ans =[];
-//正解ルートへの鍵
-var flag =["1","1","1","1","1"];
 
 //カウントして表示するやつ
 function count() {
@@ -18,7 +16,7 @@ function answerCheck(){
   $(".coin").each(function(i){
     ans.push($(this).attr("alt"));
   });
-  //if(ans == flag){
+  if($.inArray("0", ans) == -1){
     $.ajax({
       type: 'GET',
       url: './Coin/check',
@@ -31,7 +29,7 @@ function answerCheck(){
         }
       }
     });
-  //}
+  }
   ans=[];
 }
 

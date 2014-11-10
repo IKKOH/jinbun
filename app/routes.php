@@ -23,3 +23,5 @@ Route::get('/Anagram', 'AnagramController@execute');
 Route::get('/Anagram/check', 'AnagramController@check');
 Route::get('/Coin', 'CoinController@execute');
 Route::get('/Coin/check', 'CoinController@check');
+Route::get('/Water', 'WaterController@execute');
+Route::get('/Water/check', 'WaterController@check');
