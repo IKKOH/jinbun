@@ -25,3 +25,5 @@ Route::get('/Coin', 'CoinController@execute');
 Route::get('/Coin/check', 'CoinController@check');
 Route::get('/Water', 'WaterController@execute');
 Route::get('/Water/check', 'WaterController@check');
+Route::get('/CrossThree', 'CrossThreeController@execute');
+Route::get('/CrossThree/check', 'CrossThreeController@check');

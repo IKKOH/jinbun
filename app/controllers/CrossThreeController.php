@@ -1,7 +1,7 @@
 <?php
 
 
-class SwappingController extends BaseController {
+class CrossThreeController extends BaseController {
 
     /**
      * @access public
@@ -10,10 +10,10 @@ class SwappingController extends BaseController {
     public function execute()
     {
         // 使用するテンプレート指定
-        $view = View::make('Swapping');
+        $view = View::make('CrossThree');
 
         // テンプレートで使用する変数をセット
-        $view->with("_template", "Swapping");
+        $view->with("_template", "CrossThree");
 
         return $view;
     }
@@ -28,10 +28,15 @@ class SwappingController extends BaseController {
     {
         // ユーザー入力の答えを取得
         $UserAnswer = Input::get();
-        // 問題の答えを取得
-        $aryAnswerData = ANSWER::getAnswerData('swapping');
+
+        // 問題の答えを取得(2通りの答えがあるので２つ取得)
+        $aryAnswerData_A = ANSWER::getAnswerData('crossthree_a');
+        $aryAnswerData_B = ANSWER::getAnswerData('crossthree_b');
+
         // 答え合わせ
-        if( $UserAnswer['answer'] == $aryAnswerData->ANSWER) {
+        if( $UserAnswer['answer'] == $aryAnswerData_A->ANSWER) {
+            return 'true';
+        } else if ( $UserAnswer['answer'] == $aryAnswerData_B->ANSWER) {
             return 'true';
         } else {
             return 'false';

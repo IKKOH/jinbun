@@ -13,3 +13,11 @@ insert into bebras.ANSWER (`NAME`, `ANSWER`) values('swapping','list2,list7,list
 insert into bebras.ANSWER (`NAME`, `ANSWER`) values('beehive', '1,2,3,1')
 
 insert into bebras.ANSWER (`NAME`, `ANSWER`) values('by_weight', 'log4,log3,log1,log5,log2')
+
+
+insert into bebras.ANSWER (`NAME`, `ANSWER`) values('crossthree_a', 'cell1,cell2,cell4,cell6,cell8,cell9')
+
+
+insert into bebras.ANSWER (`NAME`, `ANSWER`) values('crossthree_b', 'cell2,cell3,cell4,cell6,cell7,cell8')
+
+
