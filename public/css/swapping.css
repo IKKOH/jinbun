@@ -39,6 +39,7 @@
 	height: 25px;
 	margin-bottom: 3px;
 	background: #4689FF;
+    cursor: move;
 }
 .answerlist > .list {
 	border: 1px solid #000000;
@@ -46,6 +47,7 @@
 	height: 25px;
 	margin-bottom: 3px;
 	background: #43FF6B;
+    cursor: move;
 }
 .list div{
 	text-align: left;

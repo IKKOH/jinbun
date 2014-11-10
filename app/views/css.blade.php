@@ -10,4 +10,6 @@
     {{HTML::style('css/swapping.css')}}
 @elseif ($_template == "CrossThree")
     {{HTML::style('css/crossthree.css')}}
+@elseif ($_template == "Domino")
+    {{HTML::style('css/domino.css')}}
 @endif

@@ -46,7 +46,7 @@
                     <li id="ans1">答え１</li>
                     <li id="ans2">答え２</li>
                     <li id="ans3">答え３</li>
-                    <li class="fix">{{HTML::image('img/beehive/se.png', 'ArrowSouthEast')}}</li>
+                    <li class="fix">{{HTML::image('img/beehive/se.png', 'ArrowSouthEast', array('class' => 'fix'))}}</li>
                     <li id="ans4">答え４</li>
                 </div>
             </ul>

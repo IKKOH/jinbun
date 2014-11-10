@@ -16,6 +16,7 @@
             <li>{{HTML::link('Beehive', 'Beehive')}}</li>
             <li>{{HTML::link('By_Weight', 'By_Weight')}}</li>
             <li>{{HTML::link('CrossThree', 'No 3 in a row')}}</li>
+            <li>{{HTML::link('Domino', 'Domino')}}</li>
         </ul>
     </section>
     <footer>

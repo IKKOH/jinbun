@@ -26,6 +26,7 @@
     line-height: 80px;
     text-align: center;
     overflow: hidden;
+    cursor: pointer;
 }
 .contents li img {
     margin: 12px;
