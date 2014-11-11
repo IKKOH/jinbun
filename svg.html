@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<meta charset="utf-8">
+	<title>Connecting Letters</title>
+	<script type="text/javascript" src="svg.js"></script>
+</head>
+<body onload="setup()">
+	<p>Draw lines with your mouse between circles and squares to connect the same letters. You do this by clicking on a circle and dragging with your mouse.</p>
+	<p>There are three rules you must obey:</p>
+	<ul>
+		<li>Only one line from each circle is allowed.</li>
+		<li>Only one line to each square is allowed.</li>
+		<li>The lines may not cross each other.</li>
+	</ul>
+	<div id="check">
+	</div>
+	<button onmousedown="check()">check</button>
+</body>
+</html>
