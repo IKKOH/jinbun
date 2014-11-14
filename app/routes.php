@@ -21,3 +21,5 @@ Route::get('/By_Weight/check', 'ByWeightController@check');
 Route::get('/By_Weight/compare', 'ByWeightController@compare');
 Route::get('/CrossThree', 'CrossThreeController@execute');
 Route::get('/CrossThree/check', 'CrossThreeController@check');
+Route::get('/ConnectingLetter', 'ConnectingLetterController@execute');
+Route::get('/ConnectingLetter/check', 'ConnectingLetterController@check');

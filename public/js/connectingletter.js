@@ -13,11 +13,6 @@ var circle_x;
 var circle_y;
 var circle_id;
 
-// window.onmousedown = function console_check_down(){
-// 	console.log(circle_flag);
-// 	console.log(rect_flag);
-// }
-
 function path_infomation(circle_id, rect_id){
 	this.circle_id = circle_id;
 	this.rect_id = rect_id;;
@@ -33,8 +28,18 @@ function check(){
 		if(rect_flag[i]) ans+=1;
 		else ans+=0;
 	};
-	if(ans=="101011110011101101") alert("Good Answer!!");
-	else alert("Bad Answer!!");
+	$.ajax({
+		type: 'GET',
+		url: './ConnectingLetter/check',
+		data: "answer=" + ans,
+		success: function (data) {
+			if( data == 'true') {
+				alert("正解です!!");
+			} else {
+				alert("不正解です!!");
+			}
+		}
+	});
 }
 
 window.onmousemove = function MouseMove(e){
@@ -54,31 +59,27 @@ function fix_path(lx, ly, r_id){
 		rect_flag[path_info[circle_id].rect_id] = true;
 		for (var i = 0; i < set; i++) {
 			if(circle_flag[i] && (i < circle_id)){
-				for (var j = r_id+1; j < set; j++) {
-					if(rect_flag[j]){
-						var id = tmp.getAttribute("id");
-						var path_id = document.getElementById(id);
-						delete_path(path_id, circle_id);
-						flag = true;
-						break;
-					}else{
-						tmp.setAttribute("d", d+"L"+lx+" "+ly);
-						select = false;
-					}
-				};
+				if(path_info[i].rect_id > r_id){
+					var id = tmp.getAttribute("id");
+					var path_id = document.getElementById(id);
+					delete_path(path_id, circle_id);
+					flag = true;
+					break;
+				}else{
+					tmp.setAttribute("d", d+"L"+lx+" "+ly);
+					select = false;
+				}
 			}else if(circle_flag[i] && (i > circle_id)){
-				for (var j = 0; j < r_id; j++) {
-					if(rect_flag[j]){
-						var id = tmp.getAttribute("id");
-						var path_id = document.getElementById(id);
-						delete_path(path_id, circle_id);
-						flag = true;
-						break;
-					}else{
-						tmp.setAttribute("d", d+"L"+lx+" "+ly);
-						select = false;
-					}
-				};
+				if(path_info[i].rect_id < r_id){
+					var id = tmp.getAttribute("id");
+					var path_id = document.getElementById(id);
+					delete_path(path_id, circle_id);
+					flag = true;
+					break;
+				}else{
+					tmp.setAttribute("d", d+"L"+lx+" "+ly);
+					select = false;
+				}
 			}else{
 				tmp.setAttribute("d", d+"L"+lx+" "+ly);
 				select = false;
@@ -225,3 +226,7 @@ function setup(){
 	var check = document.getElementById("check");
 	document.body.insertBefore(svg, check);
 }
+
+$(window).load( function(){
+	setup();
+});

@@ -10,4 +10,6 @@
     {{HTML::script('js/swapping.js')}}
 @elseif ($_template == "CrossThree")
     {{HTML::script('js/crossthree.js')}}
+@elseif ($_template == "ConnectingLetter")
+	{{HTML::script('js/connectingletter.js')}}
 @endif
